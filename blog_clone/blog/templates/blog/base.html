@@ -24,14 +24,14 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'post_new' %}">Post New</a></li>
-                        <li><a href="{% url 'post_draft_list' %}">Drafts</a></li>
+                        <li><a href="{% url 'post_create' %}">Post New</a></li>
+                        <li><a href="{% url 'drafts' %}">Drafts</a></li>
                         <li><a href="{% url 'logout' %}">Log Out</a></li>
                         <li>
                             Welcome: {{user.username}}
                         </li>
                     {% else %}
-                        <li><a class="nav navbar-right" href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a></li>
+                        <li><a class="nav navbar-right" href="{% url 'login' %}">Login</a></li>
                     {% endif %}
                 </ul>
             </div>
